@@ -1,0 +1,27 @@
+version: "3.8"
+
+services:
+  # Development service with hot module reloading
+  dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: development
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - VITE_HMR_HOST=host.docker.internal
+      - VITE_HMR_PORT=3000
+      - VITE_HMR_PROTOCOL=ws
+
+  # Production service
+  prod:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: production
+    ports:
+      - "8000:8000"

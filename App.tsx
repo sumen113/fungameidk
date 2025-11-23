@@ -1,33 +1,32 @@
-import React, { useState } from 'react';
-import { GameMode, CharacterType } from './types';
-import { MainMenu } from './components/MainMenu';
-import { CharacterSelect } from './components/CharacterSelect';
-import { OnlineSetup } from './components/OnlineSetup';
-import { GameLoop } from './components/GameLoop';
+import React, { useState } from "react";
+import { GameMode, CharacterType } from "./types";
+import { MainMenu } from "./components/MainMenu";
+import { CharacterSelect } from "./components/CharacterSelect";
+import { OnlineSetup } from "./components/OnlineSetup";
+import { GameLoop } from "./components/GameLoop";
 
 enum AppScreen {
-  MENU = 'MENU',
-  SELECT = 'SELECT',
-  ONLINE_LOBBY = 'ONLINE_LOBBY',
-  GAME = 'GAME',
+  MENU = "MENU",
+  SELECT = "SELECT",
+  ONLINE_LOBBY = "ONLINE_LOBBY",
+  GAME = "GAME",
 }
 
 const App: React.FC = () => {
   const [screen, setScreen] = useState<AppScreen>(AppScreen.MENU);
   const [mode, setMode] = useState<GameMode>(GameMode.MENU);
-  const [p1Char, setP1Char] = useState<CharacterType>(CharacterType.SPEEDER);
-  const [p2Char, setP2Char] = useState<CharacterType>(CharacterType.SPEEDER);
-  
-  // Online specific state
+  const [p1Char, setP1Char] = useState<CharacterType>(CharacterType.BOLT);
+  const [p2Char, setP2Char] = useState<CharacterType>(CharacterType.BOLT);
+
   const [networkConn, setNetworkConn] = useState<any>(null);
   const [isHost, setIsHost] = useState<boolean>(false);
 
   const handleModeSelect = (selectedMode: GameMode) => {
     setMode(selectedMode);
     if (selectedMode === GameMode.ONLINE) {
-       setScreen(AppScreen.ONLINE_LOBBY);
+      setScreen(AppScreen.ONLINE_LOBBY);
     } else {
-       setScreen(AppScreen.SELECT);
+      setScreen(AppScreen.SELECT);
     }
   };
 
@@ -37,21 +36,25 @@ const App: React.FC = () => {
     setScreen(AppScreen.GAME);
   };
 
-  const handleOnlineStart = (host: boolean, conn: any, myC: CharacterType, oppC: CharacterType) => {
+  const handleOnlineStart = (
+    host: boolean,
+    conn: any,
+    myC: CharacterType,
+    oppC: CharacterType
+  ) => {
     setIsHost(host);
     setNetworkConn(conn);
     if (host) {
-       setP1Char(myC);
-       setP2Char(oppC);
+      setP1Char(myC);
+      setP2Char(oppC);
     } else {
-       setP1Char(oppC);
-       setP2Char(myC);
+      setP1Char(oppC);
+      setP2Char(myC);
     }
     setScreen(AppScreen.GAME);
   };
 
   const handleExitGame = () => {
-    // Clean up connection if online
     if (networkConn) {
       networkConn.close();
       setNetworkConn(null);
@@ -69,27 +72,27 @@ const App: React.FC = () => {
       {screen === AppScreen.MENU && (
         <MainMenu onSelectMode={handleModeSelect} />
       )}
-      
+
       {screen === AppScreen.SELECT && (
-        <CharacterSelect 
-          isPvP={mode === GameMode.PVP} 
+        <CharacterSelect
+          isPvP={mode === GameMode.PVP}
           onStart={handleCharSelect}
           onBack={handleBackToMenu}
         />
       )}
 
       {screen === AppScreen.ONLINE_LOBBY && (
-         <OnlineSetup 
-            onGameStart={handleOnlineStart}
-            onBack={handleBackToMenu}
-         />
+        <OnlineSetup
+          onGameStart={handleOnlineStart}
+          onBack={handleBackToMenu}
+        />
       )}
 
       {screen === AppScreen.GAME && (
-        <GameLoop 
-          mode={mode} 
-          p1Char={p1Char} 
-          p2Char={p2Char} 
+        <GameLoop
+          mode={mode}
+          p1Char={p1Char}
+          p2Char={p2Char}
           onExit={handleExitGame}
           networkConn={networkConn}
           isHost={isHost}

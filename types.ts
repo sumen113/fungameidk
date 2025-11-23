@@ -1,15 +1,15 @@
 export enum GameMode {
-  MENU = 'MENU',
-  PVE = 'PVE',
-  PVP = 'PVP',
-  ONLINE = 'ONLINE',
+  MENU = "MENU",
+  PVE = "PVE",
+  PVP = "PVP",
+  ONLINE = "ONLINE",
 }
 
 export enum CharacterType {
-  SPEEDER = 'SPEEDER',
-  MUSCLEMAN = 'MUSCLEMAN',
-  SHOOTER = 'SHOOTER',
-  PREDICTOR = 'PREDICTOR',
+  BOLT = "BOLT",
+  STONE = "STONE",
+  BLAZE = "BLAZE",
+  SHADOW = "SHADOW",
 }
 
 export interface Vector {
@@ -75,7 +75,7 @@ export const GOAL_HEIGHT = 300;
 
 // Network Types
 export interface NetworkPacket {
-  type: 'STATE' | 'INPUT' | 'HANDSHAKE' | 'START';
+  type: "STATE" | "INPUT" | "HANDSHAKE" | "START";
   payload: any;
 }
 

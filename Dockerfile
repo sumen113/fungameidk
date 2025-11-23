@@ -1,3 +1,21 @@
+# --- Development Stage ---
+FROM node:18-alpine AS development
+
+WORKDIR /app
+
+# Install dependencies
+COPY package*.json ./
+RUN npm install
+
+# Copy source
+COPY . .
+
+# Expose the dev server port
+EXPOSE 3000
+
+# Run Vite dev server with hot module reloading
+CMD ["npm", "run", "dev", "--", "--host"]
+
 # --- Build Stage ---
 FROM node:18-alpine AS builder
 

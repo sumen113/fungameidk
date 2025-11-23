@@ -10,12 +10,13 @@
     "start": "serve -s dist -l 8000"
   },
   "dependencies": {
+    "peerjs": "^1.5.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "peerjs": "^1.5.2",
     "serve": "^14.2.1"
   },
   "devDependencies": {
+    "@types/node": "^24.10.1",
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
     "@vitejs/plugin-react": "^4.0.0",
