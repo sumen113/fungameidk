@@ -18,24 +18,24 @@ export const SPRITE_URLS = {
   BALL: "https://png.pngtree.com/png-clipart/20221223/ourmid/pngtree-cartoon-soccer-ball-png-image_6534170.png",
 
   [CharacterType.BOLT]: {
-    IDLE: "https://drive.google.com/file/d/12RartKIIjbY0qeh5Rvqiw_PY61l-7As5/preview?usp=sharing",
-    JUMP: "https://drive.google.com/file/d/17TYBTlfb-RMedU3yqxeYhCbp6VBeG-nT/view?usp=sharing",
-    KICK: "https://drive.google.com/file/d/1Cxq42Q4bAATHPtYy0VJfFoNDiG3AvcXx/view?usp=sharing",
+    IDLE: "https://ik.imagekit.io/sumenn/1.png",
+    JUMP: "https://ik.imagekit.io/sumenn/2.png",
+    KICK: "https://ik.imagekit.io/sumenn/3.png",
   },
   [CharacterType.STONE]: {
-    IDLE: "https://drive.google.com/file/d/1DCfS4McPTHkMTZL3mDJ0mX9GcyaKB3em/preview?usp=sharing",
-    JUMP: "https://drive.google.com/file/d/1P5XRbfXGEbSrsCbmmqFT9jJhXhcqzaSk/view?usp=sharing",
-    KICK: "https://i.postimg.cc/CMjfPb1H/Untitled-design.png",
+    IDLE: "https://ik.imagekit.io/sumenn/4.png",
+    JUMP: "https://ik.imagekit.io/sumenn/5.png",
+    KICK: "https://ik.imagekit.io/sumenn/6.png",
   },
   [CharacterType.BLAZE]: {
-    IDLE: "https://i.postimg.cc/7PtQ9BHW/Untitled-design-(6).png",
-    JUMP: "https://i.postimg.cc/jdW3FzCs/Untitled-design-(7).png",
-    KICK: "https://i.postimg.cc/qMtD58g7/Untitled-design-(8).png",
+    IDLE: "https://ik.imagekit.io/sumenn/7.png",
+    JUMP: "https://ik.imagekit.io/sumenn/8.png",
+    KICK: "https://ik.imagekit.io/sumenn/9.png",
   },
   [CharacterType.SHADOW]: {
-    IDLE: "https://i.postimg.cc/jjQ7cdf4/Untitled-design-(9).png",
-    JUMP: "https://i.postimg.cc/yd1Sb4hF/Untitled-design-(10).png",
-    KICK: "https://i.postimg.cc/pTWn6bQZ/Untitled-design-(11).png",
+    IDLE: "https://ik.imagekit.io/sumenn/10.png",
+    JUMP: "https://ik.imagekit.io/sumenn/11.png",
+    KICK: "https://ik.imagekit.io/sumenn/12.png",
   },
 };
 
