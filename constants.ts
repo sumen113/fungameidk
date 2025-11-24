@@ -18,12 +18,12 @@ export const SPRITE_URLS = {
   BALL: "https://png.pngtree.com/png-clipart/20221223/ourmid/pngtree-cartoon-soccer-ball-png-image_6534170.png",
 
   [CharacterType.BOLT]: {
-    IDLE: "https://drive.google.com/file/d/12RartKIIjbY0qeh5Rvqiw_PY61l-7As5/view?usp=sharing",
+    IDLE: "https://drive.google.com/file/d/12RartKIIjbY0qeh5Rvqiw_PY61l-7As5/preview?usp=sharing",
     JUMP: "https://drive.google.com/file/d/17TYBTlfb-RMedU3yqxeYhCbp6VBeG-nT/view?usp=sharing",
     KICK: "https://drive.google.com/file/d/1Cxq42Q4bAATHPtYy0VJfFoNDiG3AvcXx/view?usp=sharing",
   },
   [CharacterType.STONE]: {
-    IDLE: "https://drive.google.com/file/d/1DCfS4McPTHkMTZL3mDJ0mX9GcyaKB3em/view?usp=sharing",
+    IDLE: "https://drive.google.com/file/d/1DCfS4McPTHkMTZL3mDJ0mX9GcyaKB3em/preview?usp=sharing",
     JUMP: "https://drive.google.com/file/d/1P5XRbfXGEbSrsCbmmqFT9jJhXhcqzaSk/view?usp=sharing",
     KICK: "https://i.postimg.cc/CMjfPb1H/Untitled-design.png",
   },
