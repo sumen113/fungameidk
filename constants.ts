@@ -18,14 +18,14 @@ export const SPRITE_URLS = {
   BALL: "https://png.pngtree.com/png-clipart/20221223/ourmid/pngtree-cartoon-soccer-ball-png-image_6534170.png",
 
   [CharacterType.BOLT]: {
-    IDLE: "https://ik.imagekit.io/sumenn/1.png",
-    JUMP: "https://ik.imagekit.io/sumenn/2.png",
-    KICK: "https://ik.imagekit.io/sumenn/3.png",
-  },
-  [CharacterType.STONE]: {
     IDLE: "https://ik.imagekit.io/sumenn/4.png",
     JUMP: "https://ik.imagekit.io/sumenn/5.png",
     KICK: "https://ik.imagekit.io/sumenn/6.png",
+  },
+  [CharacterType.STONE]: {
+    IDLE: "https://ik.imagekit.io/sumenn/1.png",
+    JUMP: "https://ik.imagekit.io/sumenn/2.png",
+    KICK: "https://ik.imagekit.io/sumenn/3.png",
   },
   [CharacterType.BLAZE]: {
     IDLE: "https://ik.imagekit.io/sumenn/7.png",
